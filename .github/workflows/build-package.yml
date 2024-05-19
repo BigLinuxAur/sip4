@@ -17,7 +17,7 @@ jobs:
         shell: bash
         run: |
           # Send Hooks
-          if [ -n "$pkgver" ]; then
+          if [ -n "${{ github.event.client_payload.pkgver }}" ]; then
             pkgver=${{ github.event.client_payload.pkgver }}
           else
             pkgver=$(date +%y.%m.%d-%H%M)

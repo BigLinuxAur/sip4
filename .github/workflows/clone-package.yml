@@ -73,4 +73,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           event-type: build
-          client-payload: '{"bigbranch": "${{ github.event.client_payload.branch }}"}'
+          client-payload: '{"bigbranch": "${{ github.event.client_payload.branch }}", "pkgver": "${{ github.event.client_payload.pkgver }}" }'
